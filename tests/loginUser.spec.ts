@@ -34,7 +34,7 @@ class LoginTest extends ExpectedValueProvider {
         await runner.verifyElementIsVisible(
           accountDeletedPage.accountDeletedHeader
         );
-        // await runner.clickOnElement(accountDeletedPage.continueButton);
+        await runner.clickOnElement(accountDeletedPage.continueButton);
       });
 
       test("Login user with incorrect email and password", async ({
@@ -49,16 +49,37 @@ class LoginTest extends ExpectedValueProvider {
           homePage.signupButton,
           homeData.expectedText
         );
-        // await runner.verifyElementIsVisible(loginPage.loginHeader);
+        await runner.verifyElementIsVisible(loginPage.loginHeader);
 
-        // await runner.fillInputBox(
-        //   loginPage.emailInput,
-        //   "wronguser@example.com"
-        // );
-        // await runner.fillInputBox(loginPage.passwordInput, "wrongpassword");
-        // await runner.clickOnElement(loginPage.loginButton);
+        await runner.fillInputBox(loginPage.emailInput, "wrong@example.com");
+        await runner.fillInputBox(loginPage.passwordInput, "wrongpass");
+        await runner.clickOnElement(loginPage.loginButton);
 
-        // await runner.verifyElementIsVisible(loginPage.incorrectLoginError);
+        await runner.verifyElementIsVisible(loginPage.incorrectLoginError);
+      });
+
+      test("Logout user after successful login", async ({
+        runner,
+        homePage,
+        loginPage,
+      }) => {
+        await runner.navigateTo(homeData.baseUrl);
+        await runner.verifyElementIsVisible(homePage.homePageLogo);
+
+        await runner.validateAndClick(
+          homePage.signupButton,
+          homeData.expectedText
+        );
+        await runner.verifyElementIsVisible(loginPage.loginHeader);
+
+        await runner.fillInputBox(loginPage.emailInput, "mukto1@example.com");
+        await runner.fillInputBox(loginPage.passwordInput, "11110000");
+        await runner.clickOnElement(loginPage.loginButton);
+
+        await runner.verifyElementIsVisible(homePage.loggedInAsUserName);
+        await runner.clickOnElement(homePage.logoutButton);
+
+        await runner.verifyElementIsVisible(loginPage.loginHeader); // verifies user is back to login
       });
     });
   }
