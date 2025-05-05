@@ -233,4 +233,17 @@ export class Utils {
       throw new Error(errorMsg);
     }
   }
+
+  async verifyUrlContains(text: string): Promise<void> {
+    try {
+      const currentUrl = this.page.url();
+      expect(currentUrl).toContain(text);
+      this.logMessage(`Verified URL contains text: "${text}"`);
+    } catch (error) {
+      const errorMsg = `Current URL does not contain expected text: "${text}"`;
+      this.logMessage(errorMsg, "error");
+      await this.captureScreenshotOnFailure("verifyUrlContains");
+      throw new Error(errorMsg);
+    }
+  }
 }
