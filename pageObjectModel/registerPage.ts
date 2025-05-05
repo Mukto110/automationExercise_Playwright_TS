@@ -52,6 +52,6 @@ export class RegisterPage {
     this.city = `css=input[id='city']`;
     this.zipCode = `css=input[id='zipcode']`;
     this.mobileNumber = `css=input[id='mobile_number']`;
-    this.createAccountButton = `css=button[data-qa='create-account']`;
+    this.createAccountButton = `css=button[data-qa="create-account"]`;
   }
 }

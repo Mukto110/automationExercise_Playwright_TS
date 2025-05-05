@@ -2,6 +2,10 @@ import { test } from "../utilities/fixtures";
 import homeData from "../testData/home.json";
 import { ExpectedValueProvider } from "../utilities/valueProvider";
 
+const timestamp = Date.now();
+const email = `siddique+${timestamp}@example.com`;
+// const email = `siddique+${Math.floor(Math.random() * 1000000)}@example.com`;
+
 class RegistrationTest extends ExpectedValueProvider {
   constructor() {
     super();
@@ -12,6 +16,8 @@ class RegistrationTest extends ExpectedValueProvider {
         runner,
         homePage,
         registerPage,
+        accountCreatedPage,
+        accountDeletedPage,
       }) => {
         await runner.navigateTo(homeData.baseUrl);
         await runner.verifyElementIsVisible(homePage.homePageLogo);
@@ -20,37 +26,52 @@ class RegistrationTest extends ExpectedValueProvider {
           homeData.expectedText
         );
         await runner.verifyElementIsVisible(registerPage.registerHeader);
-        await runner.fillInputBox(registerPage.nameInput, "Mukto121");
-        await runner.fillInputBox(registerPage.emailInput, "mukto@example.com");
+        await runner.fillInputBox(registerPage.nameInput, "Siddique");
+        await runner.fillInputBox(registerPage.emailInput, email);
         await runner.clickOnElement(registerPage.signupButton);
         await runner.verifyElementIsVisible(registerPage.accountInfoHeader);
         await runner.clickOnElement(registerPage.radioButtonTitleMr);
-        await runner.verifyToHaveValue(registerPage.userName, "Mukto121");
-        await runner.verifyToHaveValue(
-          registerPage.userEmail,
-          "mukto@example.com"
-        );
-        await runner.fillInputBox(registerPage.userPassword, "12342345");
-        await runner.selectDropdownByValue(registerPage.day, "4");
-        await runner.selectDropdownByValue(registerPage.month, "4");
-        await runner.selectDropdownByValue(registerPage.year, "1997");
+        await runner.verifyToHaveValue(registerPage.userName, "Siddique");
+        await runner.verifyToHaveValue(registerPage.userEmail, email);
+        await runner.fillInputBox(registerPage.userPassword, "12312312");
+        await runner.selectDropdownByValue(registerPage.day, "20");
+        await runner.selectDropdownByValue(registerPage.month, "3");
+        await runner.selectDropdownByValue(registerPage.year, "1995");
         await runner.clickOnElement(registerPage.newsletterCheckbox);
         await runner.clickOnElement(registerPage.specialOfferCheckbox);
-        await runner.fillInputBox(registerPage.firstName, "Meraj Hossain");
-        await runner.fillInputBox(registerPage.lastName, "Mukto");
-        await runner.fillInputBox(registerPage.company, "Devsdenbd");
-        await runner.fillInputBox(registerPage.address1, "amar basha");
-        await runner.fillInputBox(registerPage.address2, "amin er basha");
-        await runner.selectDropdownByValue(registerPage.country, "Australia");
+        await runner.fillInputBox(registerPage.firstName, "Siddique");
+        await runner.fillInputBox(registerPage.lastName, "Kuddus");
+        await runner.fillInputBox(registerPage.company, "Fakir");
+        await runner.fillInputBox(
+          registerPage.address1,
+          "siddique er nijer basha"
+        );
+        await runner.fillInputBox(
+          registerPage.address2,
+          "siddique er baper basha"
+        );
+        await runner.selectDropdownByValue(registerPage.country, "Canada");
         await runner.fillInputBox(registerPage.state, "Mirpur");
         await runner.fillInputBox(registerPage.city, "Dhaka");
         await runner.fillInputBox(registerPage.zipCode, "1216");
-        await runner.fillInputBox(registerPage.mobileNumber, "12345678");
+        await runner.fillInputBox(registerPage.mobileNumber, "2143214");
         await runner.clickOnElement(registerPage.createAccountButton);
+        await runner.verifyElementIsVisible(
+          accountCreatedPage.accountCreatedTitle
+        );
+        await runner.clickOnElement(accountCreatedPage.continueButton);
+        await runner.wait(5);
+        await runner.verifyElementIsVisible(homePage.loggedInAsUserName);
+        await runner.verifyElementIsVisible(homePage.deleteAccountButton);
+        await runner.clickOnElement(homePage.deleteAccountButton);
+        await runner.verifyElementIsVisible(
+          accountDeletedPage.accountDeletedHeader
+        );
+        await runner.clickOnElement(accountDeletedPage.continueButton);
       });
     });
   } // end run test
 }
 
-const testSuit = new RegistrationTest();
-testSuit.runTest();
+const registrationTest = new RegistrationTest();
+registrationTest.runTest();
