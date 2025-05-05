@@ -1,4 +1,4 @@
-import { expect, Page } from "@playwright/test";
+import { expect, Page, Locator } from "@playwright/test";
 import logger from "./logger";
 // import { allure } from "allure-playwright";
 import { ExpectedValueProvider } from "./valueProvider";
@@ -218,6 +218,18 @@ export class Utils {
       const errorMsg = "Failed to pause the test execution";
       this.logMessage(errorMsg, "error");
       await this.captureScreenshotOnFailure("pause");
+      throw new Error(errorMsg);
+    }
+  }
+
+  async uploadFile(selector: string, filePath: string): Promise<void> {
+    try {
+      await this.page.locator(selector).setInputFiles(filePath);
+      this.logMessage(`Uploaded file from path: ${filePath}`);
+    } catch (error) {
+      const errorMsg = `Failed to upload file at: ${filePath}`;
+      this.logMessage(errorMsg, "error");
+      await this.captureScreenshotOnFailure("uploadFile");
       throw new Error(errorMsg);
     }
   }

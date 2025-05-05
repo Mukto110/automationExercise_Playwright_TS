@@ -4,12 +4,12 @@ import { ExpectedValueProvider } from "../utilities/valueProvider";
 
 const timestamp = Date.now();
 const email = `siddique+${timestamp}@example.com`;
-// const email = `siddique+${Math.floor(Math.random() * 1000000)}@example.com`;
 
 class RegistrationTest extends ExpectedValueProvider {
   constructor() {
     super();
   }
+
   runTest() {
     test.describe("Validating register page test", () => {
       test("Validating user register", async ({
@@ -69,8 +69,34 @@ class RegistrationTest extends ExpectedValueProvider {
         );
         await runner.clickOnElement(accountDeletedPage.continueButton);
       });
+
+      // Existed account:
+      // email -> mukto1@example.com
+      // password -> 11110000
+
+      test("Register user with existing email", async ({
+        runner,
+        homePage,
+        registerPage,
+      }) => {
+        const existingEmail = "mukto1@example.com";
+
+        await runner.navigateTo(homeData.baseUrl);
+        await runner.verifyElementIsVisible(homePage.homePageLogo);
+        await runner.validateAndClick(
+          homePage.signupButton,
+          homeData.expectedText
+        );
+        await runner.verifyElementIsVisible(registerPage.registerHeader);
+        await runner.fillInputBox(registerPage.nameInput, "Mukto121");
+        await runner.fillInputBox(registerPage.emailInput, existingEmail);
+        await runner.clickOnElement(registerPage.signupButton);
+        await runner.verifyElementIsVisible(
+          registerPage.emailAlreadyExistMessage
+        );
+      });
     });
-  } // end run test
+  } // end runTest
 }
 
 const registrationTest = new RegistrationTest();

@@ -6,6 +6,7 @@ export class HomePage {
   readonly loggedInAsUserName: string;
   readonly deleteAccountButton: string;
   readonly logoutButton: string;
+  readonly contactUsButton: string;
 
   constructor(page: Page) {
     this.homePageLogo = `css=img[alt='Website for automation practice']`;
@@ -13,5 +14,6 @@ export class HomePage {
     this.loggedInAsUserName = `css=ul.navbar-nav li:last-child`;
     this.deleteAccountButton = `css=a[href='/delete_account']`;
     this.logoutButton = `css=a[href='/logout']`;
+    this.contactUsButton = `css=a[href='/contact_us']`;
   }
 }

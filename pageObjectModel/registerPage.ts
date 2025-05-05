@@ -26,6 +26,7 @@ export class RegisterPage {
   readonly zipCode: string;
   readonly mobileNumber: string;
   readonly createAccountButton: string;
+  readonly emailAlreadyExistMessage: string;
 
   constructor(page: Page) {
     this.registerHeader = `css=div[class='signup-form'] h2`;
@@ -53,5 +54,6 @@ export class RegisterPage {
     this.zipCode = `css=input[id='zipcode']`;
     this.mobileNumber = `css=input[id='mobile_number']`;
     this.createAccountButton = `css=button[data-qa="create-account"]`;
+    this.emailAlreadyExistMessage = `xpath=//p[normalize-space()='Email Address already exist!']`;
   }
 }

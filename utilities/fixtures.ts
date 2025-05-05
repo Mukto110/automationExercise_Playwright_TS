@@ -5,6 +5,7 @@ import { HomePage } from "../pageObjectModel/homePage";
 import { AccountCreatedPage } from "../pageObjectModel/accountCreatedPage";
 import { AccountDeletedPage } from "../pageObjectModel/accountDeletedPage";
 import { LoginPage } from "../pageObjectModel/loginPage";
+import { ContactUsPage } from "../pageObjectModel/contactUsPage";
 
 const test = base.extend<{
   runner: Utils;
@@ -13,6 +14,7 @@ const test = base.extend<{
   accountCreatedPage: AccountCreatedPage;
   accountDeletedPage: AccountDeletedPage;
   loginPage: LoginPage;
+  contactUsPage: ContactUsPage;
 }>({
   runner: async ({ page }: { page: Page }, use) => {
     const utilsInstance = new Utils(page);
@@ -42,6 +44,11 @@ const test = base.extend<{
   loginPage: async ({ page }: { page: Page }, use) => {
     const loginPageInstance = new LoginPage(page);
     await use(loginPageInstance);
+  },
+
+  contactUsPage: async ({ page }: { page: Page }, use) => {
+    const contactUsPageInstance = new ContactUsPage(page);
+    await use(contactUsPageInstance);
   },
 });
 

@@ -79,7 +79,7 @@ class LoginTest extends ExpectedValueProvider {
         await runner.verifyElementIsVisible(homePage.loggedInAsUserName);
         await runner.clickOnElement(homePage.logoutButton);
 
-        await runner.verifyElementIsVisible(loginPage.loginHeader); // verifies user is back to login
+        await runner.verifyElementIsVisible(loginPage.loginHeader);
       });
     });
   }
