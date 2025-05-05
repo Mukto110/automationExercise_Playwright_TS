@@ -9,6 +9,11 @@ export class HomePage {
   readonly contactUsButton: string;
   readonly testCaseButton: string;
   readonly productsButton: string;
+  readonly footerId: string;
+  readonly subscriptionText: string;
+  readonly subscriptionInput: string;
+  readonly subscriptionArrowButton: string;
+  readonly subscriptionSuccessMessage: string;
 
   constructor(page: Page) {
     this.homePageLogo = `css=img[alt='Website for automation practice']`;
@@ -19,5 +24,10 @@ export class HomePage {
     this.contactUsButton = `css=a[href='/contact_us']`;
     this.testCaseButton = `css=div[class='item active'] a[class='test_cases_list'] button[type='button']`;
     this.productsButton = `css=a[href='/products']`;
+    this.footerId = `#footer`;
+    this.subscriptionText = `css=div[class='single-widget'] h2`;
+    this.subscriptionInput = `css=input[id='susbscribe_email']`;
+    this.subscriptionArrowButton = `css=button[id='subscribe']`;
+    this.subscriptionSuccessMessage = `xpath=//input[@name='csrfmiddlewaretoken']`;
   }
 }

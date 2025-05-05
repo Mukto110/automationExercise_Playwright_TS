@@ -246,4 +246,30 @@ export class Utils {
       throw new Error(errorMsg);
     }
   }
+
+  async scrollToFooter(): Promise<void> {
+    try {
+      const footerElement = this.page.locator("#footer");
+      await footerElement.scrollIntoViewIfNeeded();
+      this.logMessage("Scrolled to the footer");
+    } catch (error) {
+      const errorMsg = "Failed to scroll to the footer";
+      this.logMessage(errorMsg, "error");
+      await this.captureScreenshotOnFailure("scrollToFooter");
+      throw new Error(errorMsg);
+    }
+  }
+
+  async scrollToElement(selector: string): Promise<void> {
+    try {
+      const targetElement = this.page.locator(selector); // Use the passed selector
+      await targetElement.scrollIntoViewIfNeeded();
+      this.logMessage(`Scrolled to the element with selector: ${selector}`);
+    } catch (error) {
+      const errorMsg = `Failed to scroll to the element with selector: ${selector}`;
+      this.logMessage(errorMsg, "error");
+      await this.captureScreenshotOnFailure("scrollToElement");
+      throw new Error(errorMsg);
+    }
+  }
 }
