@@ -10,6 +10,11 @@ export class ProductsPage {
   readonly productAvailability: string;
   readonly productCondition: string;
   readonly productBrand: string;
+  readonly searchInput: string;
+  readonly searchButton: string;
+  readonly searchedProductsHeader: string;
+  readonly searchedProductList: string;
+
   constructor(page: Page) {
     this.allProductsHeader = `css=h2[class='title text-center']`;
     this.productsList = `css=div[class='features_items']`;
@@ -20,5 +25,9 @@ export class ProductsPage {
     this.productAvailability = `xpath=//div[@class='product-details']//p[2]`;
     this.productCondition = `xpath=//body//section//p[3]`;
     this.productBrand = `xpath=//body//section//p[3]`;
+    this.searchInput = `css=input[id='search_product']`;
+    this.searchButton = `css=button[id='submit_search']`;
+    this.searchedProductsHeader = `css=h2[class='title text-center']`;
+    this.searchedProductList = `css=div[class='features_items']`;
   }
 }

@@ -9,11 +9,7 @@ class ProductsTest extends ExpectedValueProvider {
 
   runTest() {
     test.describe("Validating All Products and Product Detail page", () => {
-      test("Verify All Products list and first product details", async ({
-        runner,
-        homePage,
-        productsPage,
-      }) => {
+      test.beforeEach(async ({ runner, homePage, productsPage }) => {
         await runner.navigateTo(homeData.baseUrl);
 
         await runner.verifyElementIsVisible(homePage.homePageLogo);
@@ -21,7 +17,12 @@ class ProductsTest extends ExpectedValueProvider {
         await runner.clickOnElement(homePage.productsButton);
 
         await runner.verifyElementIsVisible(productsPage.allProductsHeader);
+      });
 
+      test("Verify All Products list and first product details", async ({
+        runner,
+        productsPage,
+      }) => {
         await runner.verifyElementIsVisible(productsPage.productsList);
 
         await runner.clickOnElement(productsPage.firstViewProductButton);
@@ -37,6 +38,19 @@ class ProductsTest extends ExpectedValueProvider {
         );
         await runner.verifyElementIsVisible(productsPage.productCondition);
         await runner.verifyElementIsVisible(productsPage.productBrand);
+      });
+
+      // Test case: Verify product search displays correct results
+      test("Verify product search displays correct results", async ({
+        runner,
+        productsPage,
+      }) => {
+        await runner.fillInputBox(productsPage.searchInput, "top");
+        await runner.clickOnElement(productsPage.searchButton);
+        await runner.verifyElementIsVisible(
+          productsPage.searchedProductsHeader
+        );
+        await runner.verifyElementIsVisible(productsPage.searchedProductList);
       });
     });
   }
