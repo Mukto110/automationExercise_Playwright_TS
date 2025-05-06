@@ -58,18 +58,18 @@ class CartTest extends ExpectedValueProvider {
         runner,
         homePage,
         productsPage,
-        // productDetailPage,
+        productDetailPage,
       }) => {
         await runner.clickOnElement(homePage.firstViewProductButton);
 
         await runner.verifyUrlContains("product_details");
 
-        // await runner.fillInputBox(productDetailPage.quantityInput, "4");
-        // await runner.clickOnElement(productDetailPage.addToCartButton);
-        // await runner.clickOnElement(productDetailPage.viewCartButton);
+        await runner.fillInputBox(productDetailPage.quantityInput, "4");
+        await runner.clickOnElement(productDetailPage.addToCartButton);
+        await runner.clickOnElement(productsPage.viewCartButton);
 
-        // await runner.verifyElementIsVisible(productsPage.cartProduct1);
-        // await runner.verifyContainText(productsPage.cartProduct1Quantity, "4");
+        await runner.verifyElementIsVisible(productsPage.cartProduct1);
+        await runner.verifyContainText(productsPage.cartProduct1Quantity, "4");
       });
     });
   }
