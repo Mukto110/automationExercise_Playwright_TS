@@ -13,6 +13,7 @@ import { CartPage } from "../pageObjectModel/cartPage";
 import { CheckoutPage } from "../pageObjectModel/checkoutPage";
 import { PaymentPage } from "../pageObjectModel/paymentPage";
 import { CategoryPage } from "../pageObjectModel/categoryPage";
+import { BrandPage } from "../pageObjectModel/brandPage";
 
 const test = base.extend<{
   runner: Utils;
@@ -29,6 +30,7 @@ const test = base.extend<{
   checkoutPage: CheckoutPage;
   paymentPage: PaymentPage;
   categoryPage: CategoryPage;
+  brandPage: BrandPage;
 }>({
   runner: async ({ page }: { page: Page }, use) => {
     const utilsInstance = new Utils(page);
@@ -98,6 +100,11 @@ const test = base.extend<{
   categoryPage: async ({ page }: { page: Page }, use) => {
     const categoryPageInstance = new CategoryPage(page);
     await use(categoryPageInstance);
+  },
+
+  brandPage: async ({ page }: { page: Page }, use) => {
+    const brandPageInstance = new BrandPage(page);
+    await use(brandPageInstance);
   },
 });
 
