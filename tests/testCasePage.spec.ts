@@ -10,7 +10,6 @@ class TestCaseTest extends ExpectedValueProvider {
   runTest() {
     test.describe("Validating Test Cases page", () => {
       test("Verify Test Cases page is accessible and visible", async ({
-        page,
         runner,
         homePage,
         testCasePage,

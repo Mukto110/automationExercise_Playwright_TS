@@ -9,6 +9,9 @@ import { ContactUsPage } from "../pageObjectModel/contactUsPage";
 import { TestCasePage } from "../pageObjectModel/testCasePage";
 import { ProductsPage } from "../pageObjectModel/productsPage";
 import { ProductDetailPage } from "../pageObjectModel/productDetailPage";
+import { CartPage } from "../pageObjectModel/cartPage";
+import { CheckoutPage } from "../pageObjectModel/checkoutPage";
+import { PaymentPage } from "../pageObjectModel/paymentPage";
 
 const test = base.extend<{
   runner: Utils;
@@ -21,6 +24,9 @@ const test = base.extend<{
   testCasePage: TestCasePage;
   productsPage: ProductsPage;
   productDetailPage: ProductDetailPage;
+  cartPage: CartPage;
+  checkoutPage: CheckoutPage;
+  paymentPage: PaymentPage;
 }>({
   runner: async ({ page }: { page: Page }, use) => {
     const utilsInstance = new Utils(page);
@@ -70,6 +76,21 @@ const test = base.extend<{
   productDetailPage: async ({ page }: { page: Page }, use) => {
     const productDetailPageInstance = new ProductDetailPage(page);
     await use(productDetailPageInstance);
+  },
+
+  cartPage: async ({ page }: { page: Page }, use) => {
+    const cartPageInstance = new CartPage(page);
+    await use(cartPageInstance);
+  },
+
+  checkoutPage: async ({ page }: { page: Page }, use) => {
+    const checkoutPageInstance = new CheckoutPage(page);
+    await use(checkoutPageInstance);
+  },
+
+  paymentPage: async ({ page }: { page: Page }, use) => {
+    const paymentPageInstance = new PaymentPage(page);
+    await use(paymentPageInstance);
   },
 });
 
