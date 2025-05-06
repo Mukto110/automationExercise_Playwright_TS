@@ -56,6 +56,20 @@ export class Utils {
     }
   }
 
+  async verifyElementIsHidden(identifier: string): Promise<void> {
+    try {
+      await expect.soft(this.page.locator(identifier)).toBeHidden();
+      this.logMessage(
+        `Verified element with identifier ${identifier} is hidden`
+      );
+    } catch (error) {
+      const errorMsg = `Failed to verify element with identifier ${identifier} is hidden`;
+      this.logMessage(errorMsg, "error");
+      await this.captureScreenshotOnFailure("verifyElementIsHidden");
+      throw new Error(errorMsg);
+    }
+  }
+
   async clickOnElement(identifier: string): Promise<void> {
     try {
       await this.page.isVisible(identifier);
