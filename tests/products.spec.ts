@@ -40,7 +40,6 @@ class ProductsTest extends ExpectedValueProvider {
         await runner.verifyElementIsVisible(productsPage.productBrand);
       });
 
-      // Test case: Verify product search displays correct results
       test("Verify product search displays correct results", async ({
         runner,
         productsPage,

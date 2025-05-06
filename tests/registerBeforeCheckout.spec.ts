@@ -2,36 +2,28 @@ import { test } from "../utilities/fixtures";
 import homeData from "../testData/home.json";
 import { ExpectedValueProvider } from "../utilities/valueProvider";
 
-class CheckoutTest extends ExpectedValueProvider {
+class RegisterBeforeCheckoutTest extends ExpectedValueProvider {
   constructor() {
     super();
   }
 
   runTest() {
-    test.describe("Place Order: Register while Checkout", () => {
-      test("Register user during checkout and place order successfully", async ({
+    test.describe("Place Order: Register before Checkout", () => {
+      test("Register before checkout and place order successfully", async ({
         runner,
         homePage,
+        registerPage,
+        accountCreatedPage,
         productsPage,
         cartPage,
-        accountCreatedPage,
         checkoutPage,
         paymentPage,
         accountDeletedPage,
-        registerPage,
       }) => {
         await runner.navigateTo(homeData.baseUrl);
         await runner.verifyElementIsVisible(homePage.homePageLogo);
-        await runner.clickOnElement(homePage.productsButton);
-        await runner.mouseHover(productsPage.firstProductCard);
-        await runner.clickOnElement(productsPage.firstAddToCartButton);
-        await runner.clickOnElement(productsPage.viewCartButton);
-        await runner.verifyContainText(
-          cartPage.cartPageHeader,
-          "Shopping Cart"
-        );
-        await runner.clickOnElement(cartPage.proceedToCheckoutButton);
-        await runner.clickOnElement(cartPage.registerOrLoginButton);
+
+        await runner.clickOnElement(homePage.signupButton);
         const uniqueEmail = `user${Date.now()}@example.com`;
         await runner.fillInputBox(registerPage.nameInput, "Test User");
         await runner.fillInputBox(registerPage.emailInput, uniqueEmail);
@@ -71,15 +63,25 @@ class CheckoutTest extends ExpectedValueProvider {
         await runner.wait(5);
         await runner.verifyElementIsVisible(homePage.loggedInAsUserName);
 
-        await runner.clickOnElement(homePage.cartButton);
+        await runner.clickOnElement(homePage.productsButton);
+        await runner.mouseHover(productsPage.firstProductCard);
+        await runner.clickOnElement(productsPage.firstAddToCartButton);
+        await runner.clickOnElement(productsPage.viewCartButton);
+
+        await runner.verifyContainText(
+          cartPage.cartPageHeader,
+          "Shopping Cart"
+        );
         await runner.clickOnElement(cartPage.proceedToCheckoutButton);
+
         await runner.verifyElementIsVisible(checkoutPage.addressDetailsSection);
         await runner.verifyElementIsVisible(checkoutPage.reviewOrderSection);
         await runner.fillInputBox(
           checkoutPage.commentTextArea,
-          "Test order, please deliver soon."
+          "Test order placed after registration"
         );
         await runner.clickOnElement(checkoutPage.placeOrderButton);
+
         await runner.verifyElementIsVisible(paymentPage.paymentPageHeader);
         await runner.fillInputBox(paymentPage.nameOnCardInput, "Test User");
         await runner.fillInputBox(
@@ -92,6 +94,7 @@ class CheckoutTest extends ExpectedValueProvider {
         await runner.clickOnElement(paymentPage.payAndConfirmButton);
         // await runner.wait(5);
         // await runner.verifyElementIsVisible(paymentPage.successMessage);
+
         await runner.clickOnElement(homePage.deleteAccountButton);
         await runner.verifyElementIsVisible(
           accountDeletedPage.accountDeletedHeader
@@ -102,5 +105,5 @@ class CheckoutTest extends ExpectedValueProvider {
   }
 }
 
-const checkoutTest = new CheckoutTest();
-checkoutTest.runTest();
+const registerBeforeCheckoutTest = new RegisterBeforeCheckoutTest();
+registerBeforeCheckoutTest.runTest();
