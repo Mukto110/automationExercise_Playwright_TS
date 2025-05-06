@@ -14,6 +14,8 @@ export class HomePage {
   readonly subscriptionInput: string;
   readonly subscriptionArrowButton: string;
   readonly subscriptionSuccessMessage: string;
+  readonly cartButton: string;
+  readonly firstViewProductButton: string;
 
   constructor(page: Page) {
     this.homePageLogo = `css=img[alt='Website for automation practice']`;
@@ -29,5 +31,7 @@ export class HomePage {
     this.subscriptionInput = `css=input[id='susbscribe_email']`;
     this.subscriptionArrowButton = `css=button[id='subscribe']`;
     this.subscriptionSuccessMessage = `xpath=//input[@name='csrfmiddlewaretoken']`;
+    this.cartButton = `css=li a[href='/view_cart']`;
+    this.firstViewProductButton = `css=a[href='/product_details/1']`;
   }
 }

@@ -272,4 +272,16 @@ export class Utils {
       throw new Error(errorMsg);
     }
   }
+
+  async mouseHover(identifier: string): Promise<void> {
+    try {
+      await this.page.locator(identifier).hover();
+      this.logMessage(`Hovered over element with identifier: ${identifier}`);
+    } catch (error) {
+      const errorMsg = `Failed to hover over element with identifier: ${identifier}`;
+      this.logMessage(errorMsg, "error");
+      await this.captureScreenshotOnFailure("mouseHover");
+      throw new Error(errorMsg);
+    }
+  }
 }

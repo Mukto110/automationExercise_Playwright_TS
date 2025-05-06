@@ -8,6 +8,7 @@ import { LoginPage } from "../pageObjectModel/loginPage";
 import { ContactUsPage } from "../pageObjectModel/contactUsPage";
 import { TestCasePage } from "../pageObjectModel/testCasePage";
 import { ProductsPage } from "../pageObjectModel/productsPage";
+import { ProductDetailPage } from "../pageObjectModel/productDetailPage";
 
 const test = base.extend<{
   runner: Utils;
@@ -19,6 +20,7 @@ const test = base.extend<{
   contactUsPage: ContactUsPage;
   testCasePage: TestCasePage;
   productsPage: ProductsPage;
+  productDetailPage: ProductDetailPage;
 }>({
   runner: async ({ page }: { page: Page }, use) => {
     const utilsInstance = new Utils(page);
@@ -63,6 +65,11 @@ const test = base.extend<{
   productsPage: async ({ page }: { page: Page }, use) => {
     const productsPageInstance = new ProductsPage(page);
     await use(productsPageInstance);
+  },
+
+  productDetailPage: async ({ page }: { page: Page }, use) => {
+    const productDetailPageInstance = new ProductDetailPage(page);
+    await use(productDetailPageInstance);
   },
 });
 

@@ -11,7 +11,6 @@ class SubscriptionTest extends ExpectedValueProvider {
     test.describe("Verify Subscription on Home Page", () => {
       test.beforeEach(async ({ runner, homePage }) => {
         await runner.navigateTo(homeData.baseUrl);
-
         await runner.verifyElementIsVisible(homePage.homePageLogo);
       });
 
@@ -29,8 +28,33 @@ class SubscriptionTest extends ExpectedValueProvider {
         );
         await runner.clickOnElement(homePage.subscriptionArrowButton);
 
-        // await runner.wait(2);
+        // await runner.verifyElementIsVisible(homePage.subscriptionSuccessMessage);
+        // await runner.verifyContainText(
+        //   homePage.subscriptionSuccessMessage,
+        //   "You have been successfully subscribed!"
+        // );
+      });
+    });
 
+    test.describe("Verify Subscription on Cart Page", () => {
+      test.beforeEach(async ({ runner, homePage }) => {
+        await runner.navigateTo(homeData.baseUrl);
+        await runner.verifyElementIsVisible(homePage.homePageLogo);
+      });
+
+      test("Verify Subscription in Cart Page", async ({ runner, homePage }) => {
+        await runner.clickOnElement(homePage.cartButton);
+        await runner.scrollToElement(homePage.footerId);
+
+        await runner.verifyContainText(
+          homePage.subscriptionText,
+          "Subscription"
+        );
+        await runner.fillInputBox(
+          homePage.subscriptionInput,
+          "testuser@example.com"
+        );
+        await runner.clickOnElement(homePage.subscriptionArrowButton);
         // await runner.verifyElementIsVisible(
         //   homePage.subscriptionSuccessMessage
         // );
