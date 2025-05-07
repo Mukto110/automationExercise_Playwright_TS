@@ -19,7 +19,7 @@ export class HomePage {
 
   constructor(page: Page) {
     this.homePageLogo = `css=img[alt='Website for automation practice']`;
-    this.signupButton = `css=a[href='/login']`;
+    this.signupButton = `xpath=/html[1]/body[1]/header[1]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[4]/a[1]`;
     this.loggedInAsUserName = `css=ul.navbar-nav li:last-child`;
     this.deleteAccountButton = `css=a[href='/delete_account']`;
     this.logoutButton = `css=a[href='/logout']`;

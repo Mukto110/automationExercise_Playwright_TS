@@ -3,7 +3,7 @@ import * as path from "path";
 
 interface HomeData {
   baseUrl: string;
-  //   loginPageUrl: string;
+  loginPageUrl: string;
 }
 
 export class ExpectedValueProvider {
@@ -13,7 +13,7 @@ export class ExpectedValueProvider {
   constructor() {
     const data = this.loadHomeData();
     this.baseUrl = data.baseUrl;
-    // this.loginPageUrl = data.loginPageUrl;
+    this.loginPageUrl = data.loginPageUrl;
   }
 
   private loadHomeData(): HomeData {

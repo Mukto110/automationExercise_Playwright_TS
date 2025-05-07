@@ -8,20 +8,15 @@ class TestCaseTest extends ExpectedValueProvider {
   }
 
   runTest() {
-    test.describe("Validating Test Cases page", () => {
-      test("Verify Test Cases page is accessible and visible", async ({
-        runner,
-        homePage,
-        testCasePage,
-      }) => {
-        await runner.navigateTo(homeData.baseUrl);
-
-        await runner.verifyElementIsVisible(homePage.homePageLogo);
-
-        await runner.clickOnElement(homePage.testCaseButton);
-
-        await runner.verifyElementIsVisible(testCasePage.testCasesHeader);
-      });
+    test("Verify Test Cases page is accessible and visible", async ({
+      runner,
+      homePage,
+      testCasePage,
+    }) => {
+      await runner.navigateTo(homeData.baseUrl);
+      await runner.verifyElementIsVisible(homePage.homePageLogo);
+      await runner.clickOnElement(homePage.testCaseButton);
+      await runner.verifyElementIsVisible(testCasePage.testCasesHeader);
     });
   }
 }

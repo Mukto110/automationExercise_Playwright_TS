@@ -298,4 +298,12 @@ export class Utils {
       throw new Error(errorMsg);
     }
   }
+
+  async isElementVisible(identifier: string): Promise<boolean> {
+    try {
+      return await this.page.locator(identifier).isVisible();
+    } catch {
+      return false;
+    }
+  }
 }

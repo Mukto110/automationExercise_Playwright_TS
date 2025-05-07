@@ -6,6 +6,8 @@ export class CartPage {
   readonly registerOrLoginButton: string;
   readonly firstProductDeleteButton: string;
   readonly cartProduct1: string;
+  readonly cartProduct2: string;
+  readonly cartProduct28: string;
   readonly emptyCartMessage: string;
 
   constructor(page: Page) {
@@ -14,6 +16,8 @@ export class CartPage {
     this.registerOrLoginButton = `xpath=//u[normalize-space()='Register / Login']`;
     this.firstProductDeleteButton = `css=i[class='fa fa-times']`;
     this.cartProduct1 = `css=tr[id='product-1']`;
+    this.cartProduct2 = `css=tr[id='product-2']`;
+    this.cartProduct28 = `css=tr[id='product-28']`;
     this.emptyCartMessage = `css=p[class='text-center'] b`;
   }
 }
