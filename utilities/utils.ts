@@ -313,4 +313,21 @@ export class Utils {
     });
     await this.page.waitForTimeout(1000);
   }
+
+  async waitForDownload(
+    clickAction: () => Promise<void>,
+    downloadPath?: string
+  ) {
+    const [download] = await Promise.all([
+      this.page.waitForEvent("download"),
+      clickAction(),
+    ]);
+
+    const suggestedFilename = download.suggestedFilename();
+    const savePath = downloadPath || `downloads/${suggestedFilename}`;
+
+    await download.saveAs(savePath);
+    console.log(`✅ File downloaded successfully: ${savePath}`);
+    return savePath;
+  }
 }

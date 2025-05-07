@@ -18,6 +18,6 @@ export class PaymentPage {
     this.expiryMonthInput = `css=input[name='expiry_month']`;
     this.expiryYearInput = `css=input[name='expiry_year']`;
     this.payAndConfirmButton = `css=button[id='submit']`;
-    this.successMessage = `css=div[class='alert-success alert']`;
+    this.successMessage = `css=div[class='form-row'] div[id='success_message']`;
   }
 }
