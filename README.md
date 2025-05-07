@@ -1,4 +1,4 @@
-# 🚀 Automation Exercise - Playwright Framework (TypeScript)
+# Automation Exercise - Playwright Framework (TypeScript)
 
 This is an end-to-end (E2E) test automation framework built using **Playwright** with **TypeScript**, following best practices like the **Page Object Model (POM)**, **custom test runner**, and **test data separation**. The test cases are written against [automationexercise.com](http://automationexercise.com).
 
