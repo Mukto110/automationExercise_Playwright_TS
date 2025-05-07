@@ -20,6 +20,8 @@ export class HomePage {
   readonly recommendedProductCard: string;
   readonly recommendedAddToCartButton: string;
   readonly recommendedViewCartButton: string;
+  readonly scrollUpArrow: string;
+  readonly practiceHeader: string;
 
   constructor(page: Page) {
     this.homePageLogo = `css=img[alt='Website for automation practice']`;
@@ -41,5 +43,7 @@ export class HomePage {
     this.recommendedProductCard = `xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='recommended_items']/div[@id='recommended-item-carousel']/div[@class='carousel-inner']/div[@class='item active']/div[1]/div[1]`;
     this.recommendedAddToCartButton = `xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]`;
     this.recommendedViewCartButton = `xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/p[2]/a[1]/u[1]`;
+    this.scrollUpArrow = `css=i[class='fa fa-angle-up']`;
+    this.practiceHeader = `xpath=//section[@id='slider']//div[2]//div[1]//h2[1]`;
   }
 }

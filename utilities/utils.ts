@@ -330,4 +330,10 @@ export class Utils {
     console.log(`✅ File downloaded successfully: ${savePath}`);
     return savePath;
   }
+
+  async scrollToTop() {
+    await this.page.evaluate(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 }
