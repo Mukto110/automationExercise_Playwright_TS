@@ -12,10 +12,10 @@ export class CartPage {
   readonly cartRecommendedProduct: string;
 
   constructor(page: Page) {
-    this.cartPageHeader = `css=li[class='active']`;
-    this.proceedToCheckoutButton = `css=a[class='btn btn-default check_out']`;
+    this.cartPageHeader = `xpath=/html[1]/body[1]/section[1]/div[1]/div[1]/ol[1]/li[2]`;
+    this.proceedToCheckoutButton = `xpath=/html[1]/body[1]/section[1]/div[1]/section[1]/div[1]/div[1]/div[1]/a[1]`;
     this.registerOrLoginButton = `xpath=//u[normalize-space()='Register / Login']`;
-    this.firstProductDeleteButton = `css=i[class='fa fa-times']`;
+    this.firstProductDeleteButton = `xpath=/html[1]/body[1]/section[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[6]/a[1]/i[1]`;
     this.cartProduct1 = `css=tr[id='product-1']`;
     this.cartProduct2 = `css=tr[id='product-2']`;
     this.cartProduct28 = `css=tr[id='product-28']`;

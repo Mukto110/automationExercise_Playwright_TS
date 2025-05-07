@@ -18,8 +18,8 @@ export class ContactUsPage {
     this.subjectInput = `css=input[placeholder='Subject']`;
     this.messageTextarea = `css=textarea[id='message']`;
     this.uploadFileInput = `css=input[name='upload_file']`;
-    this.submitButton = `css=input[value='Submit']`;
-    this.successMessage = `css=.status.alert.alert-success`;
-    this.homeButton = `xpath=//a[@class='btn btn-success']`;
+    this.submitButton = `xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[3]/form[1]/div[6]/input[1]`;
+    this.successMessage = `xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[2]`;
+    this.homeButton = `css=span i[class='fa fa-angle-double-left']`;
   }
 }

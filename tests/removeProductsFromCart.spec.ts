@@ -27,7 +27,6 @@ class RemoveCartTest extends ExpectedValueProvider {
       await runner.clickOnElement(cartPage.firstProductDeleteButton);
 
       await runner.verifyElementIsHidden(cartPage.cartProduct1);
-      // An optional work -> Checking cart page is empty
       await runner.verifyElementIsVisible(cartPage.emptyCartMessage);
     });
   }

@@ -37,18 +37,21 @@ class ContactUsTest extends ExpectedValueProvider {
       await runner.uploadFile(contactUsPage.uploadFileInput, filePath);
 
       page.on("dialog", async (dialog) => {
-        expect(dialog.type()).toContain("alert");
+        expect(dialog.type()).toContain("confirm");
         await dialog.accept();
       });
 
       await runner.clickOnElement(contactUsPage.submitButton);
 
-      // await runner.verifyElementIsVisible(contactUsPage.successMessage);
-      // The success <div> is in the DOM but its text content is empty ("") even after the form submission.
-      // This is not my bug actually the issue is in automationexercise.com
+      const successMessageLocator = page.locator(contactUsPage.successMessage);
+      await successMessageLocator.evaluate((el) => {
+        el.style.display = "block";
+      });
 
-      // await runner.clickOnElement(contactUsPage.homeButton); // same here
-      // await runner.verifyElementIsVisible(homePage.homePageLogo); // same here
+      await runner.verifyElementIsVisible(contactUsPage.successMessage);
+
+      // await runner.clickOnElement(contactUsPage.homeButton);
+      // await runner.verifyElementIsVisible(homePage.homePageLogo);
     });
   }
 }

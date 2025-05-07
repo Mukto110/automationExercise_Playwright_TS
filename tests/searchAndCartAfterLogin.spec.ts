@@ -23,7 +23,6 @@ class SearchAndCartTest extends ExpectedValueProvider {
       );
       if (logoutVisible) {
         await runner.clickOnElement(homePage.logoutButton);
-        await runner.wait(5, { waitForLoadState: "networkidle" });
       }
 
       await runner.clickOnElement(homePage.productsButton);
@@ -51,7 +50,6 @@ class SearchAndCartTest extends ExpectedValueProvider {
       await runner.mouseHover(productsPage.secondProductCard);
       await runner.clickOnElement(productsPage.secondAddToCartButton);
       await runner.clickOnElement(productsPage.viewCartButton);
-      await runner.wait(5, { waitForLoadState: "networkidle" });
 
       await runner.verifyElementIsVisible(cartPage.cartProduct2);
       await runner.verifyElementIsVisible(cartPage.cartProduct28);
@@ -65,6 +63,8 @@ class SearchAndCartTest extends ExpectedValueProvider {
       await runner.clickOnElement(homePage.cartButton);
       await runner.verifyElementIsVisible(cartPage.cartProduct2);
       await runner.verifyElementIsVisible(cartPage.cartProduct28);
+
+      await runner.clickOnElement(homePage.logoutButton);
     });
   }
 }

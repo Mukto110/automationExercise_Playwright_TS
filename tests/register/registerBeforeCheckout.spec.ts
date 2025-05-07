@@ -59,7 +59,6 @@ class RegisterBeforeCheckoutTest extends ExpectedValueProvider {
         accountCreatedPage.accountCreatedTitle
       );
       await runner.clickOnElement(accountCreatedPage.continueButton);
-      await runner.wait(5);
       await runner.verifyElementIsVisible(homePage.loggedInAsUserName);
 
       await runner.clickOnElement(homePage.productsButton);
@@ -88,7 +87,6 @@ class RegisterBeforeCheckoutTest extends ExpectedValueProvider {
       await runner.fillInputBox(paymentPage.expiryMonthInput, "12");
       await runner.fillInputBox(paymentPage.expiryYearInput, "2030");
       await runner.clickOnElement(paymentPage.payAndConfirmButton);
-      // await runner.wait(5);
       // await runner.verifyElementIsVisible(paymentPage.successMessage);
 
       await runner.clickOnElement(homePage.deleteAccountButton);

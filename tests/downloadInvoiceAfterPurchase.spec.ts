@@ -1,7 +1,7 @@
 import { test } from "../utilities/fixtures";
 import homeData from "../testData/home.json";
 import { ExpectedValueProvider } from "../utilities/valueProvider";
-import { expect } from "@playwright/test";
+import fs from "fs/promises";
 
 class DownloadInvoiceTest extends ExpectedValueProvider {
   constructor() {
@@ -105,13 +105,20 @@ class DownloadInvoiceTest extends ExpectedValueProvider {
       await runner.fillInputBox(paymentPage.expiryYearInput, "2028");
       await runner.clickOnElement(paymentPage.payAndConfirmButton);
 
-      //   await runner.wait(10);
-      //   await runner.verifyContainText(
-      //     paymentPage.successMessage,
-      //     "Your order has been placed successfully!"
-      //   );
+      // const successMessageLocator = page.locator(paymentPage.successMessage);
 
-      await runner.waitForDownload(() =>
+      // await successMessageLocator.evaluate((el) => {
+      //   el.style.display = "block";
+      //   el.style.visibility = "visible";
+      //   el.style.opacity = "1";
+      // });
+
+      // await runner.verifyContainText(
+      //   paymentPage.successMessage,
+      //   "Your order has been placed successfully!"
+      // );
+
+      const downloadPath = await runner.waitForDownload(() =>
         runner.clickOnElement(orderPlacePage.downloadInvoiceButton)
       );
       await runner.clickOnElement(orderPlacePage.continueButton);
@@ -121,6 +128,13 @@ class DownloadInvoiceTest extends ExpectedValueProvider {
         accountDeletedPage.accountDeletedHeader
       );
       await runner.clickOnElement(accountDeletedPage.continueButton);
+
+      try {
+        await fs.unlink(downloadPath);
+        console.log(`🧹 Deleted downloaded invoice file: ${downloadPath}`);
+      } catch (error) {
+        console.warn(`⚠️ Failed to delete invoice: ${error}`);
+      }
     });
   }
 }

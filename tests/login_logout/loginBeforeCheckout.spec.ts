@@ -66,7 +66,6 @@ class LoginBeforeCheckoutTest extends ExpectedValueProvider {
         accountCreatedPage.accountCreatedTitle
       );
       await runner.clickOnElement(accountCreatedPage.continueButton);
-      await runner.wait(5);
       // Register end //
 
       await runner.clickOnElement(homePage.logoutButton);
@@ -81,7 +80,6 @@ class LoginBeforeCheckoutTest extends ExpectedValueProvider {
       await runner.mouseHover(productsPage.firstProductCard);
       await runner.clickOnElement(productsPage.firstAddToCartButton);
       await runner.clickOnElement(productsPage.viewCartButton);
-
       await runner.verifyContainText(cartPage.cartPageHeader, "Shopping Cart");
       await runner.clickOnElement(cartPage.proceedToCheckoutButton);
 
@@ -103,6 +101,7 @@ class LoginBeforeCheckoutTest extends ExpectedValueProvider {
       await runner.fillInputBox(paymentPage.expiryMonthInput, "12");
       await runner.fillInputBox(paymentPage.expiryYearInput, "2030");
       await runner.clickOnElement(paymentPage.payAndConfirmButton);
+
       // await runner.verifyElementIsVisible(paymentPage.successMessage);
 
       await runner.clickOnElement(homePage.deleteAccountButton);

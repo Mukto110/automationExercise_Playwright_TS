@@ -34,6 +34,16 @@ const test = base.extend<{
   brandPage: BrandPage;
   orderPlacePage: OrderPlacePage;
 }>({
+  page: async ({ page }, use) => {
+    await page.waitForLoadState("load");
+    await use(page);
+    await page.evaluate(() => {
+      localStorage.clear();
+      sessionStorage.clear();
+    });
+    await page.context().clearCookies();
+  },
+
   runner: async ({ page }: { page: Page }, use) => {
     const utilsInstance = new Utils(page);
     await use(utilsInstance);

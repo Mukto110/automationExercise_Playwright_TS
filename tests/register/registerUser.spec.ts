@@ -59,7 +59,6 @@ class RegistrationTest extends ExpectedValueProvider {
         accountCreatedPage.accountCreatedTitle
       );
       await runner.clickOnElement(accountCreatedPage.continueButton);
-      await runner.wait(5);
       await runner.verifyElementIsVisible(homePage.loggedInAsUserName);
       await runner.verifyElementIsVisible(homePage.deleteAccountButton);
       await runner.clickOnElement(homePage.deleteAccountButton);

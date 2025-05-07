@@ -17,7 +17,6 @@ class VerifyAddressCheckoutTest extends ExpectedValueProvider {
       productsPage,
       cartPage,
       checkoutPage,
-      //   homeData,
     }) => {
       const timestamp = Date.now();
       const email = `mukto+${timestamp}@example.com`;
@@ -106,7 +105,7 @@ class VerifyAddressCheckoutTest extends ExpectedValueProvider {
       await runner.verifyElementIsVisible(
         accountDeletedPage.accountDeletedHeader
       );
-      await runner.clickOnElement(accountCreatedPage.continueButton);
+      await runner.clickOnElement(accountDeletedPage.continueButton);
     });
   }
 }
