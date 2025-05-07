@@ -9,6 +9,7 @@ export class CartPage {
   readonly cartProduct2: string;
   readonly cartProduct28: string;
   readonly emptyCartMessage: string;
+  readonly cartRecommendedProduct: string;
 
   constructor(page: Page) {
     this.cartPageHeader = `css=li[class='active']`;
@@ -19,5 +20,6 @@ export class CartPage {
     this.cartProduct2 = `css=tr[id='product-2']`;
     this.cartProduct28 = `css=tr[id='product-28']`;
     this.emptyCartMessage = `css=p[class='text-center'] b`;
+    this.cartRecommendedProduct = `css=tr[id=product-4]`;
   }
 }

@@ -306,4 +306,11 @@ export class Utils {
       return false;
     }
   }
+
+  async scrollToBottom() {
+    await this.page.evaluate(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+    await this.page.waitForTimeout(1000);
+  }
 }
