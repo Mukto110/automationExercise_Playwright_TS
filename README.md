@@ -5,7 +5,6 @@ This is an end-to-end (E2E) test automation framework built using **Playwright**
 ---
 
 ## 📁 Project Structure
-
 ├── .github/workflows # CI (optional)
 ├── pageObjectModel/ # All Page Object files
 │ └── *.ts # One file per page (e.g. loginPage.ts)
