@@ -5,20 +5,28 @@ This is an end-to-end (E2E) test automation framework built using **Playwright**
 ---
 
 ## 📁 Project Structure
-├── .github/workflows # CI (optional)
-├── pageObjectModel/ # All Page Object files
-│ └── *.ts # One file per page (e.g. loginPage.ts)
-├── testData/ # JSON test data (e.g. URLs, titles, expected values)
-│ └── home.json
-├── tests/ # Test suites (grouped by feature)
-│ └── login_logout/
-│ └── loginBeforeCheckout.spec.ts
-├── utilities/
-│ ├── fixtures.ts # Global fixtures (shared across tests)
-│ ├── utils.ts # Custom runner/helper class
-│ └── valueProvider.ts # Expected values provider
-├── playwright.config.ts # Playwright configuration
-└── README.md # You’re here
+
+- **.github/**
+  - `workflows/` – CI configuration (optional)
+  
+- **pageObjectModel/**
+  - `*.ts` – One file per page (e.g. `loginPage.ts`)
+
+- **testData/**
+  - `home.json` – JSON test data (e.g., URLs, titles, expected values)
+
+- **tests/**
+  - `login_logout/`
+    - `loginBeforeCheckout.spec.ts` – Test for login and checkout scenario
+
+- **utilities/**
+  - `fixtures.ts` – Global fixtures (shared across tests)
+  - `utils.ts` – Custom runner/helper class
+  - `valueProvider.ts` – Expected values provider
+
+- `playwright.config.ts` – Playwright configuration
+
+- `README.md` – This file
 
 
 ---
