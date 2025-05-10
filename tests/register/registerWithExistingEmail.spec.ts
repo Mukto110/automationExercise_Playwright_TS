@@ -7,7 +7,6 @@ import { ExpectedValueProvider } from "../../utilities/valueProvider";
 // pass -> 11110000
 
 const email: string = process.env.TEST_EMAIL || "mukto@example.com";
-const password: string = process.env.TEST_PASSWORD || "11110000";
 
 class RegisterWithExistingEmailTest extends ExpectedValueProvider {
   constructor() {
@@ -27,8 +26,8 @@ class RegisterWithExistingEmailTest extends ExpectedValueProvider {
         homeData.expectedText
       );
       await runner.verifyElementIsVisible(registerPage.registerHeader);
-      await runner.fillInputBox(registerPage.nameInput, email);
-      await runner.fillInputBox(registerPage.emailInput, password);
+      await runner.fillInputBox(registerPage.nameInput, "Mukto121");
+      await runner.fillInputBox(registerPage.emailInput, email);
       await runner.clickOnElement(registerPage.signupButton);
       await runner.verifyElementIsVisible(
         registerPage.emailAlreadyExistMessage

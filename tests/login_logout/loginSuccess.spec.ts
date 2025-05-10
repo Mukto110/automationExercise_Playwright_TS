@@ -1,7 +1,8 @@
+import { fakeUser } from "../../utilities/fakeData";
 import { test } from "../../utilities/fixtures";
 
-const timestamp = Date.now();
-const email = `mukto+${timestamp}@example.com`;
+const email = fakeUser.email;
+const password = fakeUser.password;
 
 test("Login user with correct email and password", async ({
   runner,
@@ -24,7 +25,7 @@ test("Login user with correct email and password", async ({
   await runner.clickOnElement(registerPage.signupButton);
   await runner.verifyElementIsVisible(registerPage.accountInfoHeader);
   await runner.clickOnElement(registerPage.radioButtonTitleMr);
-  await runner.fillInputBox(registerPage.userPassword, "11110000");
+  await runner.fillInputBox(registerPage.userPassword, password);
   await runner.selectDropdownByValue(registerPage.day, "20");
   await runner.selectDropdownByValue(registerPage.month, "3");
   await runner.selectDropdownByValue(registerPage.year, "1995");
@@ -51,7 +52,7 @@ test("Login user with correct email and password", async ({
   await runner.clickOnElement(homePage.signupButton);
   await runner.verifyElementIsVisible(loginPage.loginHeader);
   await runner.fillInputBox(loginPage.emailInput, email);
-  await runner.fillInputBox(loginPage.passwordInput, "11110000");
+  await runner.fillInputBox(loginPage.passwordInput, password);
   await runner.clickOnElement(loginPage.loginButton);
 
   await runner.verifyElementIsVisible(homePage.loggedInAsUserName);

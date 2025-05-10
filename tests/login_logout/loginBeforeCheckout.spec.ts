@@ -1,9 +1,10 @@
 import { test } from "../../utilities/fixtures";
 import homeData from "../../testData/home.json";
 import { ExpectedValueProvider } from "../../utilities/valueProvider";
+import { fakeUser } from "../../utilities/fakeData";
 
-const timestamp = Date.now();
-const email = `mukto+${timestamp}@example.com`;
+const email = fakeUser.email;
+const password = fakeUser.password;
 
 class LoginBeforeCheckoutTest extends ExpectedValueProvider {
   constructor() {
@@ -39,7 +40,7 @@ class LoginBeforeCheckoutTest extends ExpectedValueProvider {
       await runner.clickOnElement(registerPage.radioButtonTitleMr);
       await runner.verifyToHaveValue(registerPage.userName, "Mukto121");
       await runner.verifyToHaveValue(registerPage.userEmail, email);
-      await runner.fillInputBox(registerPage.userPassword, "11110000");
+      await runner.fillInputBox(registerPage.userPassword, password);
       await runner.selectDropdownByValue(registerPage.day, "20");
       await runner.selectDropdownByValue(registerPage.month, "3");
       await runner.selectDropdownByValue(registerPage.year, "1995");
@@ -72,7 +73,7 @@ class LoginBeforeCheckoutTest extends ExpectedValueProvider {
 
       await runner.clickOnElement(homePage.signupButton);
       await runner.fillInputBox(loginPage.emailInput, email);
-      await runner.fillInputBox(loginPage.passwordInput, "11110000");
+      await runner.fillInputBox(loginPage.passwordInput, password);
       await runner.clickOnElement(loginPage.loginButton);
       await runner.verifyElementIsVisible(homePage.loggedInAsUserName);
 

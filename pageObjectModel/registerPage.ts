@@ -54,6 +54,6 @@ export class RegisterPage {
     this.zipCode = `css=input[id='zipcode']`;
     this.mobileNumber = `css=input[id='mobile_number']`;
     this.createAccountButton = `css=button[data-qa="create-account"]`;
-    this.emailAlreadyExistMessage = `xpath=//p[normalize-space()='Email Address already exist!']`;
+    this.emailAlreadyExistMessage = `xpath=/html[1]/body[1]/section[1]/div[1]/div[1]/div[3]/div[1]/form[1]/p[1]`;
   }
 }

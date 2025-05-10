@@ -5,7 +5,7 @@ export class AccountCreatedPage {
   readonly continueButton: string;
 
   constructor(page: Page) {
-    this.accountCreatedTitle = `css=h2[class='title text-center'] b`;
-    this.continueButton = `css=a[class="btn btn-primary"]`;
+    this.accountCreatedTitle = `css=h2[data-qa='account-created']`;
+    this.continueButton = `css=a[data-qa='continue-button']`;
   }
 }

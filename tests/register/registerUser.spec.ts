@@ -1,9 +1,9 @@
 import { test } from "../../utilities/fixtures";
 import homeData from "../../testData/home.json";
 import { ExpectedValueProvider } from "../../utilities/valueProvider";
+import { fakeUser } from "../../utilities/fakeData";
 
-const timestamp = Date.now();
-const email = `mukto+${timestamp}@example.com`;
+const email = fakeUser.email;
 
 class RegistrationTest extends ExpectedValueProvider {
   constructor() {

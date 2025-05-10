@@ -1,3 +1,4 @@
+import { fakeUser } from "../../utilities/fakeData";
 import { test } from "../../utilities/fixtures";
 import { ExpectedValueProvider } from "../../utilities/valueProvider";
 
@@ -27,7 +28,7 @@ class CheckoutTest extends ExpectedValueProvider {
       await runner.verifyContainText(cartPage.cartPageHeader, "Shopping Cart");
       await runner.clickOnElement(cartPage.proceedToCheckoutButton);
       await runner.clickOnElement(cartPage.registerOrLoginButton);
-      const uniqueEmail = `user${Date.now()}@example.com`;
+      const uniqueEmail = fakeUser.email;
       await runner.fillInputBox(registerPage.nameInput, "Test User");
       await runner.fillInputBox(registerPage.emailInput, uniqueEmail);
       await runner.clickOnElement(registerPage.signupButton);

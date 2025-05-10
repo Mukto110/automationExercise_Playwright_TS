@@ -1,3 +1,4 @@
+import { fakeUser } from "../../utilities/fakeData";
 import { test } from "../../utilities/fixtures";
 import { ExpectedValueProvider } from "../../utilities/valueProvider";
 
@@ -22,7 +23,8 @@ class RegisterBeforeCheckoutTest extends ExpectedValueProvider {
       await runner.verifyElementIsVisible(homePage.homePageLogo);
 
       await runner.clickOnElement(homePage.signupButton);
-      const uniqueEmail = `user${Date.now()}@example.com`;
+      const uniqueEmail = fakeUser.email;
+      const password = fakeUser.password;
       await runner.fillInputBox(registerPage.nameInput, "Test User");
       await runner.fillInputBox(registerPage.emailInput, uniqueEmail);
       await runner.clickOnElement(registerPage.signupButton);
@@ -31,7 +33,7 @@ class RegisterBeforeCheckoutTest extends ExpectedValueProvider {
       await runner.clickOnElement(registerPage.radioButtonTitleMr);
       await runner.verifyToHaveValue(registerPage.userName, "Test User");
       await runner.verifyToHaveValue(registerPage.userEmail, uniqueEmail);
-      await runner.fillInputBox(registerPage.userPassword, "12312312");
+      await runner.fillInputBox(registerPage.userPassword, password);
       await runner.selectDropdownByValue(registerPage.day, "20");
       await runner.selectDropdownByValue(registerPage.month, "3");
       await runner.selectDropdownByValue(registerPage.year, "1995");

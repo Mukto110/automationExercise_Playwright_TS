@@ -62,8 +62,6 @@ class SearchAndCartTest extends ExpectedValueProvider {
       await runner.clickOnElement(homePage.cartButton);
       await runner.verifyElementIsVisible(cartPage.cartProduct2);
       await runner.verifyElementIsVisible(cartPage.cartProduct28);
-
-      await runner.clickOnElement(homePage.logoutButton);
     });
   }
 }
