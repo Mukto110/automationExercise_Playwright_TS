@@ -1,0 +1,7 @@
+[2025-05-10 16:17:34] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:35] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:35] INFO: Clicked on element with identifier: css=li a[href='/view_cart']
+[2025-05-10 16:17:35] INFO: Scrolled to the element with selector: #footer
+[2025-05-10 16:17:35] INFO: Verified element with identifier css=div[class='single-widget'] h2 contains text: "Subscription"
+[2025-05-10 16:17:35] INFO: Filled input box (css=input[id='susbscribe_email']) with text: "testuser@example.com"
+[2025-05-10 16:17:35] INFO: Clicked on element with identifier: css=button[id='subscribe']

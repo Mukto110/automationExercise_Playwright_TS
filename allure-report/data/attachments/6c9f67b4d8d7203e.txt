@@ -1,0 +1,4 @@
+[2025-05-10 16:17:39] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:39] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:40] INFO: Clicked on element with identifier: css=div[class='item active'] a[class='test_cases_list'] button[type='button']
+[2025-05-10 16:17:40] INFO: Verified element with identifier css=h2[class='title text-center'] b is visible

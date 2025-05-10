@@ -1,0 +1,7 @@
+[2025-05-10 16:16:43] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:16:43] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:16:44] INFO: Verified element with identifier css=div[class='recommended_items'] h2[class='title text-center'] contains text: "recommended items"
+[2025-05-10 16:16:44] INFO: Hovered over element with identifier: xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='recommended_items']/div[@id='recommended-item-carousel']/div[@class='carousel-inner']/div[@class='item active']/div[1]/div[1]
+[2025-05-10 16:16:44] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]
+[2025-05-10 16:16:45] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/p[2]/a[1]/u[1]
+[2025-05-10 16:16:45] INFO: Verified element with identifier css=tr[id=product-4] is visible

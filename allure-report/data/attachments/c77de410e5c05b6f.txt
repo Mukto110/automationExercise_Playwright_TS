@@ -1,0 +1,17 @@
+[2025-05-10 16:16:38] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:16:38] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:16:39] INFO: Clicked on element with identifier: css=a[href='/products']
+[2025-05-10 16:16:39] INFO: Hovered over element with identifier: xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]
+[2025-05-10 16:16:40] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/a[1]
+[2025-05-10 16:16:51] INFO: Clicked on element with identifier: css=button[class='btn btn-success close-modal btn-block']
+[2025-05-10 16:16:51] INFO: Hovered over element with identifier: xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[3]/div[1]/div[1]/div[1]
+[2025-05-10 16:16:52] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/a[1]
+[2025-05-10 16:16:54] INFO: Clicked on element with identifier: xpath=//u[normalize-space()='View Cart']
+[2025-05-10 16:16:54] INFO: Verified element with identifier css=tr[id='product-1'] is visible
+[2025-05-10 16:16:54] INFO: Verified element with identifier css=tr[id='product-2'] is visible
+[2025-05-10 16:16:54] INFO: Verified element with identifier css=tr[id='product-1'] td[class='cart_price'] p contains text: "Rs. 500"
+[2025-05-10 16:16:54] INFO: Verified element with identifier css=tr[id='product-2'] td[class='cart_price'] p contains text: "Rs. 400"
+[2025-05-10 16:16:54] INFO: Verified element with identifier css=tr[id='product-1'] button[class='disabled'] contains text: "1"
+[2025-05-10 16:16:54] INFO: Verified element with identifier css=tr[id='product-2'] button[class='disabled'] contains text: "1"
+[2025-05-10 16:16:54] INFO: Verified element with identifier css=tr[id='product-1'] p[class='cart_total_price'] contains text: "Rs. 500"
+[2025-05-10 16:16:54] INFO: Verified element with identifier css=tr[id='product-2'] p[class='cart_total_price'] contains text: "Rs. 400"

@@ -1,0 +1,9 @@
+[2025-05-10 16:17:40] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:40] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:40] INFO: Verified element with identifier css=div[class='left-sidebar'] is visible
+[2025-05-10 16:17:40] INFO: Clicked on element with identifier: css=a[href='#Women']
+[2025-05-10 16:17:41] INFO: Clicked on element with identifier: css=a[href='/category_products/2']
+[2025-05-10 16:17:41] INFO: Verified element with identifier css=h2[class='title text-center'] contains text: "Women - Tops Products"
+[2025-05-10 16:17:41] INFO: Clicked on element with identifier: css=a[href='#Men']
+[2025-05-10 16:17:43] INFO: Clicked on element with identifier: css=a[href='/category_products/3']
+[2025-05-10 16:17:43] INFO: Verified element with identifier css=h2[class='title text-center'] contains text: "Men - Tshirts Products"

@@ -2,7 +2,12 @@
   "name": "automationexercise_playwright_ts",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:chrome": "npx playwright test --project=Chromium",
+    "allure:generate": "allure generate allure-results -o allure-report --clean",
+    "allure:open": "allure open allure-report",
+    "test:allure": "npm run test:chrome && npm run allure:generate && npm run allure:open"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -10,7 +15,8 @@
   "devDependencies": {
     "@faker-js/faker": "^9.7.0",
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.3"
+    "@types/node": "^22.15.3",
+    "allure-playwright": "^3.2.1"
   },
   "dependencies": {
     "dotenv": "^16.5.0",

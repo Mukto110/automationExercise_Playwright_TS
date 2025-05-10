@@ -1,0 +1,5 @@
+[2025-05-10 16:17:25] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:25] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:26] INFO: Verified element with identifier css=div[class='single-widget'] h2 is visible
+[2025-05-10 16:17:26] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/a[1]/i[1]
+[2025-05-10 16:17:27] INFO: Verified element with identifier xpath=//section[@id='slider']//div[2]//div[1]//h2[1] contains text: "Full-Fledged practice website for Automation Engineers"

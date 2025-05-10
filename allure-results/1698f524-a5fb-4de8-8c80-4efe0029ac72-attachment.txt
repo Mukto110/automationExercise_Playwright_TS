@@ -1,0 +1,12 @@
+[2025-05-10 16:16:49] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:16:49] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:16:49] INFO: Clicked on element with identifier: css=a[href='/contact_us']
+[2025-05-10 16:16:50] INFO: Verified element with identifier xpath=//h2[text()='Get In Touch'] is visible
+[2025-05-10 16:16:50] INFO: Filled input box (css=input[placeholder='Name']) with text: "Mukto"
+[2025-05-10 16:16:50] INFO: Filled input box (css=input[placeholder='Email']) with text: "mukto@example.com"
+[2025-05-10 16:16:50] INFO: Filled input box (css=input[placeholder='Subject']) with text: "Test Subject"
+[2025-05-10 16:16:50] INFO: Filled input box (css=textarea[id='message']) with text: "This is a test message."
+[2025-05-10 16:16:50] INFO: Clicked on element with identifier: css=input[name='upload_file']
+[2025-05-10 16:16:50] INFO: Uploaded file from path: /Users/merajhossainmukto/Downloads/B9 A10 Type-01 Requirements.pdf
+[2025-05-10 16:16:50] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[3]/form[1]/div[6]/input[1]
+[2025-05-10 16:16:50] INFO: Verified element with identifier xpath=/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[2] is visible

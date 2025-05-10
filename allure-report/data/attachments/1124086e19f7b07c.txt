@@ -1,0 +1,10 @@
+[2025-05-10 16:17:40] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:40] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:41] INFO: Clicked on element with identifier: css=a[href='/products']
+[2025-05-10 16:17:41] INFO: Verified element with identifier css=div[class='brands_products'] is visible
+[2025-05-10 16:17:41] INFO: Clicked on element with identifier: css=a[href='/brand_products/Polo']
+[2025-05-10 16:17:41] INFO: Verified element with identifier css=h2[class='title text-center'] contains text: "Brand - Polo Products"
+[2025-05-10 16:17:41] INFO: Verified element with identifier xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2] is visible
+[2025-05-10 16:17:42] INFO: Clicked on element with identifier: css=a[href='/brand_products/H&M']
+[2025-05-10 16:17:42] INFO: Verified element with identifier css=h2[class='title text-center'] contains text: "Brand - H&M Products"
+[2025-05-10 16:17:42] INFO: Verified element with identifier xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2] is visible

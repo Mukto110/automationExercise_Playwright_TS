@@ -1,0 +1,8 @@
+[2025-05-10 16:17:18] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:18] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:18] INFO: Validated and clicked on xpath=//a[normalize-space()='Signup / Login'] with expected text "Signup / Login"
+[2025-05-10 16:17:18] INFO: Verified element with identifier css=div[class='signup-form'] h2 is visible
+[2025-05-10 16:17:18] INFO: Filled input box (css=input[placeholder='Name']) with text: "Mukto121"
+[2025-05-10 16:17:18] INFO: Filled input box (css=input[data-qa='signup-email']) with text: "mukto@example.com"
+[2025-05-10 16:17:19] INFO: Clicked on element with identifier: css=button[data-qa='signup-button']
+[2025-05-10 16:17:19] INFO: Verified element with identifier xpath=/html[1]/body[1]/section[1]/div[1]/div[1]/div[3]/div[1]/form[1]/p[1] is visible

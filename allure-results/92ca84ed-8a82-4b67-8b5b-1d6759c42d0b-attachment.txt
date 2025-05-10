@@ -1,0 +1,10 @@
+[2025-05-10 16:17:25] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:25] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:26] INFO: Clicked on element with identifier: css=a[href='/products']
+[2025-05-10 16:17:26] INFO: Hovered over element with identifier: xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]
+[2025-05-10 16:17:27] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/a[1]
+[2025-05-10 16:17:30] INFO: Clicked on element with identifier: xpath=//u[normalize-space()='View Cart']
+[2025-05-10 16:17:30] INFO: Verified element with identifier xpath=/html[1]/body[1]/section[1]/div[1]/div[1]/ol[1]/li[2] contains text: "Shopping Cart"
+[2025-05-10 16:17:30] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[6]/a[1]/i[1]
+[2025-05-10 16:17:31] INFO: Verified element with identifier css=tr[id='product-1'] is hidden
+[2025-05-10 16:17:31] INFO: Verified element with identifier css=p[class='text-center'] b is visible

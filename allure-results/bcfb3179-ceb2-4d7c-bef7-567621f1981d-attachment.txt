@@ -1,0 +1,12 @@
+[2025-05-10 16:16:38] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:16:38] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:16:38] INFO: Clicked on element with identifier: css=a[href='/products']
+[2025-05-10 16:16:39] INFO: Verified element with identifier css=h2[class='title text-center'] contains text: "All Products"
+[2025-05-10 16:16:40] INFO: Clicked on element with identifier: css=a[href='/product_details/1']
+[2025-05-10 16:16:40] INFO: Scrolled to the element with selector: css=a[href='#reviews']
+[2025-05-10 16:16:40] INFO: Verified element with identifier css=a[href='#reviews'] contains text: "Write Your Review"
+[2025-05-10 16:16:40] INFO: Filled input box (css=input[id='name']) with text: "Mukto"
+[2025-05-10 16:16:40] INFO: Filled input box (css=input[id='email']) with text: "mukto@example.com"
+[2025-05-10 16:16:40] INFO: Filled input box (css=textarea[id='review']) with text: "Great product, very satisfied!"
+[2025-05-10 16:16:40] INFO: Clicked on element with identifier: css=button[id='button-review']
+[2025-05-10 16:16:40] INFO: Verified element with identifier xpath=/html[1]/body[1]/section[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/span[1] contains text: "Thank you for your review."

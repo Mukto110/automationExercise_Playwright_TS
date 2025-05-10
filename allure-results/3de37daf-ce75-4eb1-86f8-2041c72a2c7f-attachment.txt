@@ -1,0 +1,8 @@
+[2025-05-10 16:17:12] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:12] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:13] INFO: Clicked on element with identifier: css=a[href='/products']
+[2025-05-10 16:17:13] INFO: Verified element with identifier css=h2[class='title text-center'] is visible
+[2025-05-10 16:17:13] INFO: Filled input box (css=input[id='search_product']) with text: "top"
+[2025-05-10 16:17:14] INFO: Clicked on element with identifier: css=button[id='submit_search']
+[2025-05-10 16:17:14] INFO: Verified element with identifier css=h2[class='title text-center'] is visible
+[2025-05-10 16:17:14] INFO: Verified element with identifier css=div[class='features_items'] is visible

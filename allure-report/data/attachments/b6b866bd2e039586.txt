@@ -1,0 +1,47 @@
+[2025-05-10 16:16:41] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:16:41] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:16:42] INFO: Validated and clicked on xpath=//a[normalize-space()='Signup / Login'] with expected text "Signup / Login"
+[2025-05-10 16:16:42] INFO: Verified element with identifier css=div[class='signup-form'] h2 is visible
+[2025-05-10 16:16:42] INFO: Filled input box (css=input[placeholder='Name']) with text: "Mukto121"
+[2025-05-10 16:16:42] INFO: Filled input box (css=input[data-qa='signup-email']) with text: "Saige_Schoen44@hotmail.com"
+[2025-05-10 16:16:43] INFO: Clicked on element with identifier: css=button[data-qa='signup-button']
+[2025-05-10 16:16:44] INFO: Verified element with identifier css=body > section:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1) > b:nth-child(1) is visible
+[2025-05-10 16:16:44] INFO: Clicked on element with identifier: css=input[id='id_gender1']
+[2025-05-10 16:16:44] INFO: Verified element (css=input[id='name']) has value: "Mukto121"
+[2025-05-10 16:16:44] INFO: Verified element (css=input[id='email']) has value: "Saige_Schoen44@hotmail.com"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='password']) with text: "11110000"
+[2025-05-10 16:16:44] INFO: Selected dropdown (css=select[id='days']) value: "20"
+[2025-05-10 16:16:44] INFO: Selected dropdown (css=select[id='months']) value: "3"
+[2025-05-10 16:16:44] INFO: Selected dropdown (css=select[id='years']) value: "1995"
+[2025-05-10 16:16:44] INFO: Clicked on element with identifier: css=input[id=newsletter]
+[2025-05-10 16:16:44] INFO: Clicked on element with identifier: css=input[id=optin]
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='first_name']) with text: "Siddique"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='last_name']) with text: "Kuddus"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='company']) with text: "Fakir"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='address1']) with text: "siddique er nijer basha"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='address2']) with text: "siddique er baper basha"
+[2025-05-10 16:16:44] INFO: Selected dropdown (css=select[id='country']) value: "Canada"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='state']) with text: "Mirpur"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='city']) with text: "Dhaka"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='zipcode']) with text: "1216"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='mobile_number']) with text: "2143214"
+[2025-05-10 16:16:44] INFO: Clicked on element with identifier: css=button[data-qa="create-account"]
+[2025-05-10 16:16:44] INFO: Verified element with identifier css=h2[data-qa='account-created'] is visible
+[2025-05-10 16:16:45] INFO: Clicked on element with identifier: css=a[data-qa='continue-button']
+[2025-05-10 16:16:45] INFO: Verified element with identifier css=ul.navbar-nav li:last-child is visible
+[2025-05-10 16:16:47] INFO: Clicked on element with identifier: css=a[href='/products']
+[2025-05-10 16:16:47] INFO: Verified element with identifier css=h2[class='title text-center'] contains text: "All Products"
+[2025-05-10 16:16:47] INFO: Hovered over element with identifier: xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]
+[2025-05-10 16:16:48] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/a[1]
+[2025-05-10 16:16:49] INFO: Clicked on element with identifier: xpath=//u[normalize-space()='View Cart']
+[2025-05-10 16:16:49] INFO: Verified element with identifier xpath=/html[1]/body[1]/section[1]/div[1]/div[1]/ol[1]/li[2] is visible
+[2025-05-10 16:16:49] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[1]/div[1]/section[1]/div[1]/div[1]/div[1]/a[1]
+[2025-05-10 16:16:49] INFO: Verified element with identifier xpath=//h3[normalize-space()='Your delivery address'] is visible
+[2025-05-10 16:16:49] INFO: Verified element with identifier xpath=//h3[normalize-space()='Your billing address'] is visible
+[2025-05-10 16:16:49] INFO: Verified element with identifier css=ul[id='address_delivery'] contains text: "Siddique Kuddus"
+[2025-05-10 16:16:49] INFO: Verified element with identifier css=ul[id='address_delivery'] contains text: "siddique er nijer basha"
+[2025-05-10 16:16:49] INFO: Verified element with identifier css=ul[id='address_invoice'] contains text: "Siddique Kuddus"
+[2025-05-10 16:16:49] INFO: Verified element with identifier css=ul[id='address_invoice'] contains text: "siddique er nijer basha"
+[2025-05-10 16:16:50] INFO: Clicked on element with identifier: css=a[href='/delete_account']
+[2025-05-10 16:16:50] INFO: Verified element with identifier css=h2[class='title text-center'] b is visible
+[2025-05-10 16:16:50] INFO: Clicked on element with identifier: css=.btn.btn-primary

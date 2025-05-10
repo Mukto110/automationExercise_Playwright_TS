@@ -1,0 +1,9 @@
+[2025-05-10 16:16:44] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:16:44] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:16:44] INFO: Clicked on element with identifier: css=a[href='/product_details/1']
+[2025-05-10 16:16:44] INFO: Verified URL contains text: "product_details"
+[2025-05-10 16:16:44] INFO: Filled input box (css=input[id='quantity']) with text: "4"
+[2025-05-10 16:16:44] INFO: Clicked on element with identifier: css=button[type='button']
+[2025-05-10 16:16:45] INFO: Clicked on element with identifier: xpath=//u[normalize-space()='View Cart']
+[2025-05-10 16:16:45] INFO: Verified element with identifier css=tr[id='product-1'] is visible
+[2025-05-10 16:16:45] INFO: Verified element with identifier css=tr[id='product-1'] button[class='disabled'] contains text: "4"

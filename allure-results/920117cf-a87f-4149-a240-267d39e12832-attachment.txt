@@ -1,0 +1,25 @@
+[2025-05-10 16:17:34] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:34] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:35] INFO: Clicked on element with identifier: css=a[href='/products']
+[2025-05-10 16:17:35] INFO: Verified element with identifier css=h2[class='title text-center'] contains text: "All Products"
+[2025-05-10 16:17:35] INFO: Filled input box (css=input[id='search_product']) with text: "Tshirt"
+[2025-05-10 16:17:37] INFO: Clicked on element with identifier: css=button[id='submit_search']
+[2025-05-10 16:17:37] INFO: Verified element with identifier css=h2[class='title text-center'] contains text: "Searched Products"
+[2025-05-10 16:17:37] INFO: Verified element with identifier xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1] is visible
+[2025-05-10 16:17:37] INFO: Verified element with identifier xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[3]/div[1]/div[1]/div[1] is visible
+[2025-05-10 16:17:37] INFO: Hovered over element with identifier: xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]
+[2025-05-10 16:17:38] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/a[1]
+[2025-05-10 16:17:39] INFO: Clicked on element with identifier: css=button[class='btn btn-success close-modal btn-block']
+[2025-05-10 16:17:39] INFO: Hovered over element with identifier: xpath=//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[3]/div[1]/div[1]/div[1]
+[2025-05-10 16:17:40] INFO: Clicked on element with identifier: xpath=/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/a[1]
+[2025-05-10 16:17:41] INFO: Clicked on element with identifier: xpath=//u[normalize-space()='View Cart']
+[2025-05-10 16:17:41] INFO: Verified element with identifier css=tr[id='product-2'] is visible
+[2025-05-10 16:17:41] INFO: Verified element with identifier css=tr[id='product-28'] is visible
+[2025-05-10 16:17:41] INFO: Verified element with identifier xpath=//a[normalize-space()='Signup / Login'] is visible
+[2025-05-10 16:17:41] INFO: Clicked on element with identifier: xpath=//a[normalize-space()='Signup / Login']
+[2025-05-10 16:17:41] INFO: Filled input box (css=input[data-qa='login-email']) with text: "mukto@example.com"
+[2025-05-10 16:17:41] INFO: Filled input box (css=input[placeholder='Password']) with text: "11110000"
+[2025-05-10 16:17:42] INFO: Clicked on element with identifier: css=button[data-qa='login-button']
+[2025-05-10 16:17:42] INFO: Clicked on element with identifier: css=li a[href='/view_cart']
+[2025-05-10 16:17:42] INFO: Verified element with identifier css=tr[id='product-2'] is visible
+[2025-05-10 16:17:42] INFO: Verified element with identifier css=tr[id='product-28'] is visible

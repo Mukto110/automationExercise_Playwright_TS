@@ -1,0 +1,13 @@
+[2025-05-10 16:17:04] INFO: Navigated to https://automationexercise.com
+[2025-05-10 16:17:04] INFO: Verified element with identifier css=img[alt='Website for automation practice'] is visible
+[2025-05-10 16:17:05] INFO: Clicked on element with identifier: css=a[href='/products']
+[2025-05-10 16:17:05] INFO: Verified element with identifier css=h2[class='title text-center'] is visible
+[2025-05-10 16:17:05] INFO: Verified element with identifier css=div[class='features_items'] is visible
+[2025-05-10 16:17:08] INFO: Clicked on element with identifier: css=a[href='/product_details/1']
+[2025-05-10 16:17:08] INFO: Verified URL contains text: "product_details"
+[2025-05-10 16:17:08] INFO: Verified element with identifier css=div[class='product-information'] h2 is visible
+[2025-05-10 16:17:08] INFO: Verified element with identifier xpath=//p[normalize-space()='Category: Women > Tops'] is visible
+[2025-05-10 16:17:08] INFO: Verified element with identifier css=div[class='product-information'] span span is visible
+[2025-05-10 16:17:08] INFO: Verified element with identifier xpath=//div[@class='product-details']//p[2] contains text: "Availability: In Stock"
+[2025-05-10 16:17:08] INFO: Verified element with identifier xpath=//body//section//p[3] is visible
+[2025-05-10 16:17:08] INFO: Verified element with identifier xpath=//body//section//p[3] is visible
