@@ -1,5 +1,4 @@
 import { test } from "../../utilities/fixtures";
-import homeData from "../../testData/home.json";
 
 const timestamp = Date.now();
 const email = `mukto+${timestamp}@example.com`;
@@ -12,7 +11,7 @@ test("Login user with correct email and password", async ({
   loginPage,
   accountDeletedPage,
 }) => {
-  await runner.navigateTo(homeData.baseUrl);
+  await runner.navigateTo(process.env.BASE_URL!);
   if (await runner.isElementVisible(homePage.logoutButton)) {
     await runner.clickOnElement(homePage.logoutButton);
   }

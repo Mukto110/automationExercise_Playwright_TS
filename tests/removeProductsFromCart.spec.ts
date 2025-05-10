@@ -1,5 +1,4 @@
 import { test } from "../utilities/fixtures";
-import homeData from "../testData/home.json";
 import { ExpectedValueProvider } from "../utilities/valueProvider";
 
 class RemoveCartTest extends ExpectedValueProvider {
@@ -14,7 +13,7 @@ class RemoveCartTest extends ExpectedValueProvider {
       productsPage,
       cartPage,
     }) => {
-      await runner.navigateTo(homeData.baseUrl);
+      await runner.navigateTo(process.env.BASE_URL!);
       await runner.verifyElementIsVisible(homePage.homePageLogo);
 
       await runner.clickOnElement(homePage.productsButton);

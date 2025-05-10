@@ -1,5 +1,4 @@
 import { test } from "../../utilities/fixtures";
-import homeData from "../../testData/home.json";
 import { ExpectedValueProvider } from "../../utilities/valueProvider";
 
 class CheckoutTest extends ExpectedValueProvider {
@@ -19,7 +18,7 @@ class CheckoutTest extends ExpectedValueProvider {
       accountDeletedPage,
       registerPage,
     }) => {
-      await runner.navigateTo(homeData.baseUrl);
+      await runner.navigateTo(process.env.BASE_URL!);
       await runner.verifyElementIsVisible(homePage.homePageLogo);
       await runner.clickOnElement(homePage.productsButton);
       await runner.mouseHover(productsPage.firstProductCard);

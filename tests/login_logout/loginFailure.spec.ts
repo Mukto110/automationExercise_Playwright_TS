@@ -1,12 +1,11 @@
 import { test } from "../../utilities/fixtures";
-import homeData from "../../testData/home.json";
 
 test("Login user with incorrect email and password", async ({
   runner,
   homePage,
   loginPage,
 }) => {
-  await runner.navigateTo(homeData.baseUrl);
+  await runner.navigateTo(process.env.BASE_URL!);
   if (await runner.isElementVisible(homePage.logoutButton)) {
     await runner.clickOnElement(homePage.logoutButton);
   }

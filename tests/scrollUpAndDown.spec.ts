@@ -1,5 +1,4 @@
 import { test } from "../utilities/fixtures";
-import homeData from "../testData/home.json";
 import { ExpectedValueProvider } from "../utilities/valueProvider";
 
 class ScrollTest extends ExpectedValueProvider {
@@ -12,7 +11,7 @@ class ScrollTest extends ExpectedValueProvider {
       runner,
       homePage,
     }) => {
-      await runner.navigateTo(homeData.baseUrl);
+      await runner.navigateTo(process.env.BASE_URL!);
       await runner.verifyElementIsVisible(homePage.homePageLogo);
 
       await runner.scrollToBottom();

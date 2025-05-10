@@ -23,7 +23,7 @@ class LoginBeforeCheckoutTest extends ExpectedValueProvider {
       registerPage,
       accountCreatedPage,
     }) => {
-      await runner.navigateTo(homeData.baseUrl);
+      await runner.navigateTo(process.env.BASE_URL!);
       await runner.verifyElementIsVisible(homePage.homePageLogo);
 
       // Register Account //

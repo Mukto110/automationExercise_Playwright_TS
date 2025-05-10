@@ -1,5 +1,4 @@
 import { test } from "../utilities/fixtures";
-import homeData from "../testData/home.json";
 import { ExpectedValueProvider } from "../utilities/valueProvider";
 
 class SubscriptionTest extends ExpectedValueProvider {
@@ -10,7 +9,7 @@ class SubscriptionTest extends ExpectedValueProvider {
   runTest() {
     test.describe("Verify Subscription on Home Page", () => {
       test.beforeEach(async ({ runner, homePage }) => {
-        await runner.navigateTo(homeData.baseUrl);
+        await runner.navigateTo(process.env.BASE_URL!);
         await runner.verifyElementIsVisible(homePage.homePageLogo);
       });
 
@@ -38,7 +37,7 @@ class SubscriptionTest extends ExpectedValueProvider {
 
     test.describe("Verify Subscription on Cart Page", () => {
       test.beforeEach(async ({ runner, homePage }) => {
-        await runner.navigateTo(homeData.baseUrl);
+        await runner.navigateTo(process.env.BASE_URL!);
         await runner.verifyElementIsVisible(homePage.homePageLogo);
       });
 

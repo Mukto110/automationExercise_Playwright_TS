@@ -21,7 +21,7 @@ class VerifyAddressCheckoutTest extends ExpectedValueProvider {
       const timestamp = Date.now();
       const email = `mukto+${timestamp}@example.com`;
 
-      await runner.navigateTo(homeData.baseUrl);
+      await runner.navigateTo(process.env.BASE_URL!);
       await runner.verifyElementIsVisible(homePage.homePageLogo);
 
       if (await runner.isElementVisible(homePage.logoutButton)) {

@@ -1,5 +1,4 @@
 import { test } from "../utilities/fixtures";
-import homeData from "../testData/home.json";
 import { ExpectedValueProvider } from "../utilities/valueProvider";
 
 class ProductsTest extends ExpectedValueProvider {
@@ -10,7 +9,7 @@ class ProductsTest extends ExpectedValueProvider {
   runTest() {
     test.describe("Validating All Products and Product Detail page", () => {
       test.beforeEach(async ({ runner, homePage, productsPage }) => {
-        await runner.navigateTo(homeData.baseUrl);
+        await runner.navigateTo(process.env.BASE_URL!);
 
         await runner.verifyElementIsVisible(homePage.homePageLogo);
 

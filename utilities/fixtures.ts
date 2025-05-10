@@ -37,10 +37,18 @@ const test = base.extend<{
   page: async ({ page }, use) => {
     await page.waitForLoadState("load");
     await use(page);
-    await page.evaluate(() => {
-      localStorage.clear();
-      sessionStorage.clear();
-    });
+    try {
+      await page.evaluate(() => {
+        localStorage.clear();
+        sessionStorage.clear();
+      });
+    } catch (err: any) {
+      if (err.message.includes("Execution context was destroyed")) {
+        console.warn("Skipped storage clearing due to navigation.");
+      } else {
+        throw err;
+      }
+    }
     await page.context().clearCookies();
   },
 
